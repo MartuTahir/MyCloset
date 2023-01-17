@@ -1,0 +1,260 @@
+header > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#logo1 {
+    width: 150px;
+    height: 150px;
+}
+#search {
+    width: 19px;
+    height: 19px;
+    margin-left: 10px;
+}
+.buscador {   
+    width: 220px;
+    height: 23px;
+    border-radius: 10px;
+    border: none;
+}
+.botonVender {
+    width: 100px;
+    height: 40px;
+    background-color: #E15073;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+.botonVender:hover {
+    transform: scale(1.1);
+    background-color: #a72544;
+}
+.botonIngresar {
+    width: 100px;
+    height: 40px;
+    background-color: #E15073;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.botonIngresar:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #a72544;
+}
+#colorIngresar {
+    color: white;
+    text-decoration: none;
+}
+.iconos {
+    background-color: #E15073;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+.iconos:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #a72544;
+}
+.navegacion {
+    background-color: #b83963;
+    width: 500px;
+    height: 70px;
+    grid-area: navegacion;
+    justify-self: center;
+    align-self: center;
+}
+.navegacion ul {
+    list-style: none;
+}
+.menu > li {
+    display: inline-block;
+}
+.menu > li > a {
+    display: block;
+    padding: 15px 15px;
+    color: white;
+    text-decoration: none;
+
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+}
+.fondoInicio {
+    background-color: #E15073;
+}
+#imgInicio {
+    width: 550px;
+    height: 550px;
+    margin: 250px 200px 100px 400px;
+}
+.iconoFb {
+    margin: 20px 0px 20px 1180px;
+}
+.iconoIg {
+    margin: 20px 0px 20px 20px;
+}
+#help {
+    width: 15px;
+    height: 15px;
+    margin: 30px 10px 30px 15px;
+}
+.gridMenu {
+    width: 100%;
+    display: grid;  
+    grid-template-areas:
+    "logo buscar navegacion botones";
+    grid-template-rows: 1fr; 
+    grid-template-columns: 0,2fr 1fr 1fr 1fr;
+    background-color: #b83963;
+    position: fixed;
+
+}
+.logo {
+    grid-area: logo;
+}
+.input {
+    grid-area: buscar;
+}
+.botones {
+    grid-area: botones;
+    justify-content: space-evenly;
+}
+body {
+    margin: 0;
+}
+footer {
+    background-color: #b83963;
+}
+.divProd1 {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: row;
+}
+.bordeProd {
+    border: 2px solid rgb(182, 178, 178);
+    border-radius: 20px;
+    margin-top: 200px;
+    height: 450px;
+}
+.bordeProds {
+    border: 2px solid rgb(182, 178, 178);
+    border-radius: 20px;
+    height: 450px;
+}
+.contacto {
+    border: 2px solid #b83963;
+    background-color: #b83963;
+    width: 300px;
+    height: 200px;
+    margin: 0px 250px 200px 500px;
+}
+#div {
+    height: 200px;
+}
+.ingresar {
+    border: 2px solid #b83963;
+    border-radius: 20px;
+    background-color: #b83963;
+    width: 300px;
+    height: 500px;
+    margin: 0px 250px 200px 500px;
+}
+
+.grid_card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    background-color: #E15073;
+}
+.imagen-card {
+    height: 17rem;
+    border-radius: 1rem;
+}
+
+.card{
+    width: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #b83963;
+    border-radius: 2rem;
+    padding: 1rem;
+    font-family: Inter;
+    background-color: white;
+}
+.card:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px #b83963;
+}
+.cardTop {
+    margin-top: 13rem;
+}
+.cardLeft {
+    margin-left: 3rem;
+}
+.cardBottom {
+    margin-bottom: 3rem;
+}
+.cardEspacio {
+    margin-left: 1.4rem;
+}
+.textProd {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.textPrecio {
+    margin-top: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.userImg {
+    width: 2.8rem;
+    height: 2.8rem;
+    margin: 0.5rem 0.3rem 1.5rem 0rem;
+}
+.userVend {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.textUser {
+    margin-top: 1.4rem;
+    font-size: 1rem;
+}
+.btnComprar {
+    width: 150px;
+    height: 35px;
+    background-color: #E15073;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    opacity: 0;
+}
+.btnComprar:hover {
+    cursor: pointer;
+    opacity: 100;
+}
