@@ -1,7 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
 header > div {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
 }
 #logo1 {
     width: 150px;
@@ -97,6 +106,63 @@ header > div {
     font-weight: 500;
     font-size: 14px;
 }
+.menuH {
+    width: 2.5rem;
+    height: 3rem;
+    opacity: 0;
+}
+#barras {
+    display: none;
+}
+.burger {
+    grid-area: burger;
+}
+@media screen and (max-width: 767px) {
+    .menuH {
+        opacity: 100;
+    }
+    .buscador {
+        width: 110px;
+        height: 15px;
+    }
+    #search {
+    }
+    .navegacion {
+        
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        width: 140px;
+        height: 220px;
+        font-size: 10px;
+        margin-top: 70px;
+        background-color: #a72544;
+    }
+    #logo1 {
+       display: none;
+    }
+    .gridMenu {
+        width: 100%;
+        display: grid;  
+        grid-template-areas:
+        ". buscar . botones burger";
+        grid-template-rows: 1fr; 
+        grid-template-columns: 0fr 1fr 0fr 0.9fr 0fr;
+        background-color: #b83963;
+        position: fixed;
+    
+    }
+    .botonIngresar {
+        width: 60px;
+        height: 20px;
+    }
+    .botonVender {
+        margin-left: 240px;
+        width: 60px;
+        height: 20px;
+    }
+}
 .fondoInicio {
     background-color: #E15073;
 }
@@ -120,9 +186,9 @@ header > div {
     width: 100%;
     display: grid;  
     grid-template-areas:
-    "logo buscar navegacion botones";
+    "logo buscar navegacion botones burger";
     grid-template-rows: 1fr; 
-    grid-template-columns: 0,2fr 1fr 1fr 1fr;
+    grid-template-columns: 0.2fr 1fr 1fr 0.9fr 0fr;
     background-color: #b83963;
     position: fixed;
 
@@ -182,6 +248,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    padding: 3rem;
     background-color: #E15073;
 }
 .imagen-card {
@@ -190,7 +257,7 @@ footer {
 }
 
 .card{
-    width: 13rem;
+    width: 16rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -207,15 +274,6 @@ footer {
 }
 .cardTop {
     margin-top: 13rem;
-}
-.cardLeft {
-    margin-left: 3rem;
-}
-.cardBottom {
-    margin-bottom: 3rem;
-}
-.cardEspacio {
-    margin-left: 1.4rem;
 }
 .textProd {
     margin-top: 1.5rem;
@@ -258,3 +316,9 @@ footer {
     cursor: pointer;
     opacity: 100;
 }
+
+/* .menuFlex{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+} */
