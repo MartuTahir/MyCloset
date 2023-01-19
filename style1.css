@@ -125,11 +125,6 @@ header > div {
         width: 110px;
         height: 15px;
     }
-    #search {
-    }
-    .navegacion {
-        
-    }
     .menu {
         display: flex;
         flex-direction: column;
