@@ -6,64 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Closet</title>
     <link href="images/myClosetLogo.png">
-    <link rel="stylesheet" href="style1.css"/> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style1.css"/> 
 </head>
 <body>  
-    <header class="gridMenu">
-
-        <div class="logo">
-            <img src="images/myClosetLogo.png" alt="" id="logo1"/>
-        </div>
-        <div class="input">
-            <input type="text" name="Buscar" class="buscador">
-            <a href="">
-                <img src="images/lupa.png" id="search"/>
-            </a>
-        </div>
-            <nav class="navegacion">
-                <ul class="menu">
-                    <li>
-                    <a href="index2.html"> Inicio </a>
-                    </li>
-                    <li>
-                        <a href="pagina2.html"> Todas las publicaciones </a>
-                    </li>
-                    <li>
-                        <a href="pagina3.html"> Ofertas </a>
-                    </li>
-                    <li>
-                        <a href="pagina4.html"> Contacto </a>
-                    </li>
-                </ul>
-            </nav>
-        <div class="botones">
-            <button class="botonVender">
-                VENDER 
-            </button>
-            <button class="botonIngresar">
-                <a href="pagina5.html" id="colorIngresar">
-                    INGRESAR
-                </a>
-            </button>
-            <a href="">
-                <img src="images/iconoCarrito.png" class="iconos"/>
-            </a>
-        </div> 
-        <div class="burger">
-            <input type="checkbox" id="barras">
-            <label for="barras">
+    <header class="navegar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid navegar">
+                <div class="">
+                    <img src="images/myClosetLogo.png" alt="" id="logo1"/>
+                </div>
+                <div class="botones">
+                    <button class="botonVender">
+                        VENDER 
+                    </button>
+                    <button class="botonIngresar">
+                        <a href="pagina5.html" id="colorIngresar">
+                            INGRESAR
+                        </a>
+                    </button>
+                </div> 
+                <div>
+                    <a href="">
+                        <img src="images/iconoCarrito.png" class="iconos carrito"/>
+                    </a>
+                </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <!--<span class="navbar-toggler-icon"></span>-->
                 <img src="images/menu.png-PhotoRoom.png" alt="" class="menuH">
-            </label>
-        </div> 
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu" href="pagina2.html">Todas las publicaciones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu" href="pagina3.html">Ofertas</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu">Contacto</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 buscador" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">
+                        <img src="images/lupa.png" id="search"/>
+                    </button>
+                </form>
+              </div>
+              
+            </div>
+          </nav>
+    
     </header>
-                
-    <div class="fondoInicio">
-        <img src="images/myCloset-inicio.png" alt="" id="imgInicio">
+    
+    <div class="tamañoMax">          
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/carrusel.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/publi-carrusel.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/publicidad-carru.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row bg-pink">
+      <h5 class="col-12 tipografia"> Algunos usuarios vendedores</h5>
     </div>
+
+    <div class="row gap">
+      <div class="card cardUser">
+        <div class="card-header userVend">
+          <img src="images/user.png" class="userImg" alt="">
+          <h6 class="paddingText"> Vendedor </h6>
+        </div>
+        <div class="card-body">
+          <a href="#" class="btn btn-primary">Seguir</a>
+        </div>
+      </div>
+      <div class="card cardUser">
+        <div class="card-header userVend">
+          <img src="images/user.png" class="userImg" alt="">
+          <h6 class="paddingText"> Vendedor </h6>
+        </div>
+        <div class="card-body">
+          <a href="#" class="btn btn-primary">Seguir</a>
+        </div>
+      </div>
+      <div class="card cardUser">
+        <div class="card-header userVend">
+          <img src="images/user.png" class="userImg" alt="">
+          <h6 class="paddingText"> Vendedor </h6>
+        </div>
+        <div class="card-body">
+          <a href="#" class="btn btn-primary">Seguir</a>
+        </div>
+      </div>
+    </div>
+  </div>
     <footer>
         <a href="">
             <img src="images/iconoFb.png" alt="" class="iconos iconoFb">

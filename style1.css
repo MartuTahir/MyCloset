@@ -3,30 +3,79 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
-
-header > div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+header {
+    position: fixed !important;
+    z-index: 1;
+    width: 100%;
 }
+
+nav {
+   z-index: 1 !important;
+}
+.navegar {
+    background-color: #b83963;
+}
+.bg-body-tertiary {
+    background-color: #b83963 !important;
+}
+.btn-outline-success {
+    border-radius: 8rem !important;
+    font-family: Inter !important;
+    border-color: white !important;
+    color: white !important;
+}
+.btn-outline-success:hover {
+    background-color: #a72544 !important;
+    border-color: #a72544 !important;
+}
+.btn {
+    background-color: #E15073 !important;
+    border-color: #E15073 !important;
+}
+.form-control {
+    border-color: #E15073 !important;
+    color: #E15073 !important;
+}
+.form-control:active {
+    box-shadow: #E15073 !important;
+}
+.active {
+    color: white !important;
+    font-family: Inter !important;
+    font-size: 0.9rem !important;
+    font-weight: 500 !important;
+}
+.active:hover {
+    color: black !important;
+}
+
 #logo1 {
     width: 150px;
     height: 150px;
 }
 #search {
-    width: 19px;
-    height: 19px;
-    margin-left: 10px;
+    width: 1rem;
+    height: 1rem;
 }
-.buscador {   
-    width: 220px;
-    height: 23px;
-    border-radius: 10px;
-    border: none;
+.nav-link {
+    margin-left: 1rem !important;
 }
+.buscador:active {
+    border-color: #a72544 !important;
+    box-shadow: 3px 3px #a72544 !important;
+}
+.navbar-toggler {
+    border: transparent !important;
+    color: transparent !important;
+}
+.navbar-toggler:active {
+    border-color: white !important;
+}
+.menuH {
+    width: 2rem;
+    height: 2rem;
+}
+
 .botonVender {
     width: 100px;
     height: 40px;
@@ -55,6 +104,7 @@ header > div {
     font-size: 14px;
     text-decoration: none;
     transition: all 0.3s;
+    margin-left: 1rem;
 }
 .botonIngresar:hover {
     cursor: pointer;
@@ -71,100 +121,44 @@ header > div {
     height: 40px;
     border-radius: 20px;
     transition: all 0.3s;
+    margin-left: 1rem;
 }
 .iconos:hover {
     cursor: pointer;
     transform: scale(1.1);
     background-color: #a72544;
 }
-.navegacion {
-    background-color: #b83963;
-    width: 500px;
-    height: 70px;
-    grid-area: navegacion;
-    justify-self: center;
-    align-self: center;
-}
-.navegacion ul {
-    list-style: none;
-}
-.menu > li {
-    display: inline-block;
-}
-.menu > li > a {
-    display: block;
-    padding: 15px 15px;
-    color: white;
-    text-decoration: none;
-
+.carrito {
+    margin-right: 2rem;
 }
 .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
     font-family: Inter;
     font-weight: 500;
     font-size: 14px;
+    color: white;
 }
-.menuH {
-    width: 2.5rem;
-    height: 3rem;
-    opacity: 0;
-}
-#barras {
-    display: none;
-}
-.burger {
-    grid-area: burger;
-}
-@media screen and (max-width: 767px) {
-    .menuH {
-        opacity: 100;
-    }
-    .buscador {
-        width: 110px;
-        height: 15px;
-    }
-    .menu {
-        display: flex;
-        flex-direction: column;
-        width: 140px;
-        height: 220px;
-        font-size: 10px;
-        margin-top: 70px;
-        background-color: #a72544;
-    }
-    #logo1 {
-       display: none;
-    }
-    .gridMenu {
-        width: 100%;
-        display: grid;  
-        grid-template-areas:
-        ". buscar . botones burger";
-        grid-template-rows: 1fr; 
-        grid-template-columns: 0fr 1fr 0fr 0.9fr 0fr;
-        background-color: #b83963;
-        position: fixed;
-    
-    }
-    .botonIngresar {
-        width: 60px;
-        height: 20px;
-    }
-    .botonVender {
-        margin-left: 240px;
-        width: 60px;
-        height: 20px;
-    }
+#imgInicio {
+    margin-top: 10rem;
 }
 .fondoInicio {
     background-color: #E15073;
 }
-#imgInicio {
-    width: 550px;
-    height: 550px;
-    margin: 250px 200px 100px 400px;
+
+.tamañoMax {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+}
+.espacio { 
+    width: 100%;
+    height: 1rem;
+}
+.tipografia {
+    font-family: Inter;
+    padding: 1% 0% 1% 39%;
+    color: white;
+}
+.bg-pink {
+    background: radial-gradient(circle, rgba(225,80,115,1) 0%, rgba(184,57,99,1) 50%, rgba(167,37,68,1) 100%);
 }
 .iconoFb {
     margin: 20px 0px 20px 1180px;
@@ -181,9 +175,9 @@ header > div {
     width: 100%;
     display: grid;  
     grid-template-areas:
-    "logo buscar navegacion botones burger";
+    "logo buscar navegacion botones";
     grid-template-rows: 1fr; 
-    grid-template-columns: 0.2fr 1fr 1fr 0.9fr 0fr;
+    grid-template-columns: 0.2fr 1fr 1fr 0.9fr;
     background-color: #b83963;
     position: fixed;
 
@@ -193,6 +187,7 @@ header > div {
 }
 .input {
     grid-area: buscar;
+    margin-left: 4rem;
 }
 .botones {
     grid-area: botones;
@@ -251,7 +246,7 @@ footer {
     border-radius: 1rem;
 }
 
-.card{
+.cardP {
     width: 16rem;
     display: flex;
     flex-direction: column;
@@ -263,11 +258,11 @@ footer {
     font-family: Inter;
     background-color: white;
 }
-.card:hover {
+.cardP:hover {
     cursor: pointer;
     box-shadow: 3px 3px #b83963;
 }
-.cardTop {
+.cardP:nth-child(-n + 4) {
     margin-top: 13rem;
 }
 .textProd {
@@ -284,6 +279,19 @@ footer {
     width: 2.8rem;
     height: 2.8rem;
     margin: 0.5rem 0.3rem 1.5rem 0rem;
+}
+.paddingText {
+    padding-top: 5.5%;
+    font-family: Inter;
+    color: black;
+}
+.cardUser {
+    width: 20rem;
+    margin: 3%;
+    margin-bottom: 8%;
+}
+.gap {
+    gap: 5%;
 }
 .userVend {
     display: flex;
@@ -312,8 +320,57 @@ footer {
     opacity: 100;
 }
 
-/* .menuFlex{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-} */
+@media (min-width: 481px) and (max-width: 1200px ) {
+    .menu {
+        justify-content: flex-start;
+        font-size: 12.5px;
+    }
+    .botonIngresar {
+        margin-right: 1px;
+        margin-left: 1px;
+        width: 5.5rem;
+        height: 2.5rem;
+        font-size: 12px;
+    }
+    .botonVender {
+        width: 5.5rem;
+        height: 2.5rem;
+        font-size: 12px;
+    }
+    .botones {
+        max-width: 20rem;
+    }
+    .gridMenu {
+        grid-template-columns: 7rem 1fr 28rem 25rem;
+    }
+    #imgInicio {
+        width: 427px;
+        height: 450px;
+        margin: 300px 200px 150px 180px;
+      }
+
+      .navegacion{
+        max-width: 400px;
+        margin-top: 1.5rem;
+      }
+      #logo1 {
+        width: 8.2rem;
+        height: 8.3rem;
+      }
+      .cardP:nth-child(-n + 2) {
+        margin-top: 13rem;
+    }
+}
+
+@media screen and (max-width: 548px) {
+    #logo1 {
+       display: none;
+    }
+    .tamañoMax {
+        padding-top: 7rem;
+    }
+    .tipografia {
+        padding: 1% 0% 1% 17%;
+        font-size: 17px;
+    }
+}
