@@ -6,71 +6,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Closet</title>
     <link href="images/myClosetLogo.png">
-    <link rel="stylesheet" href="style1.css"/> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style1.css"/> 
 </head>
 <body>
-    <header class="gridMenu">
-        <div class="logo">
-            <img src="images/myClosetLogo.png" alt="" id="logo1"/>
-        </div>
-        <div class="input">
-            <input type="text" name="Buscar" class="buscador">
-            <a href="">
-                <img src="images/lupa.png" id="search"/>
-            </a>
-        </div>
-            <nav class="navegacion">
-                <ul class="menu">
-                    <li>
-                    <a href="index.html"> Inicio </a>
-                    </li>
-                    <li>
-                        <a href="pagina2.html"> Todas las publicaciones </a>
-                    </li>
-                    <li>
-                        <a href="pagina3.html"> Ofertas </a>
-                    </li>
-                    <li>
-                        <a href="pagina4.html"> Contacto </a>
-                    </li>
-                </ul>
-            </nav>
-        <div class="botones">
-            <button class="botonVender">
-                VENDER 
-            </button>
-            <button class="botonIngresar">
-                <a href="pagina5.html" id="colorIngresar">
-                    INGRESAR
-                </a>
-            </button>
-            <a href="">
-                <img src="images/iconoCarrito.png" class="iconos"/>
-            </a>
-        </div>  
-    </header>
-    <div class="gridOfertas">
-        <div class="prod1 bordeProd">
-                <div class="divProd1">
-                    <img src="images/user.png" alt="" class="userImg">
-                    <p> (Tienda o vendedor) </p>
+    <header class="navegar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid navegar">
+                <div class="">
+                    <img src="images/myClosetLogo.png" alt="" id="logo1"/>
                 </div>
+                <div class="botones">
+                    <button class="botonVender">
+                        VENDER 
+                    </button>
+                    <button class="botonIngresar">
+                        <a href="pagina5.html" id="colorIngresar">
+                            INGRESAR
+                        </a>
+                    </button>
+                </div> 
                 <div>
-                   
+                    <a href="">
+                        <img src="images/iconoCarrito.png" class="iconos carrito"/>
+                    </a>
                 </div>
-        </div>
-        <div class="prod2 bordeProd">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <!--<span class="navbar-toggler-icon"></span>-->
+                <img src="images/menu.png-PhotoRoom.png" alt="" class="menuH">
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu" href="pagina2.html">Todas las publicaciones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu" href="pagina3.html">Ofertas</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu" href="pagina4.html">Contacto</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 buscador" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">
+                        <img src="images/lupa.png" id="search"/>
+                    </button>
+                </form>
+              </div>
+              
+            </div>
+          </nav>
+    
+    </header>
+    <div class="grid_card">
 
+        <div class="cardP cardLeft">
+            <div class= "userVend">
+                <img src="images/user.png" alt="" class="userImg">
+                <p class="textUser"> (Tienda o vendedor) </p>
+            </div>
+            <img src="images/remera.jpeg" alt="" class="imagen-card">
+            <button class="btn2x1"> 2x1</button>
+            <p class="textProd">Remera</p>
+            <div class="d-flex">
+                <p class="textPrecio texTachado">$2500</p>
+                <p class="textPrecio textColor">$1800</p>
+            </div>
+            <button class= "btnComprar"> COMPRAR </button>
         </div>
-        <div class="prod3 bordeProd">
 
+        <div class="cardP cardEspacio">
+            <div class= "userVend">
+                <img src="images/user.png" alt="" class="userImg">
+                <p class="textUser"> (Tienda o vendedor) </p>
+            </div>
+            <img src="images/remera2.jpeg" alt="" class="imagen-card">
+            <button class="btnOFF"> 30% OFF</button>
+            <p class="textProd">Remera</p>
+            <div class="d-flex">
+                <p class="textPrecio texTachado">$2500</p>
+                <p class="textPrecio textColor">$1750</p>
+            </div>
+            <button class= "btnComprar"> COMPRAR </button>
         </div>
-        <div class="prod4 bordeProd">
 
+        <div class="cardP">
+            <div class= "userVend">
+                <img src="images/user.png" alt="" class="userImg">
+                <p class="textUser"> (Tienda o vendedor) </p>
+            </div>
+            <img src="images/remera3.jpeg" alt="" class="imagen-card">
+            <button class="btn2x1"> 2x1</button>
+            <p class="textProd">Remera</p>
+            <div class="d-flex">
+                <p class="textPrecio texTachado">$2500</p>
+                <p class="textPrecio textColor">$1800</p>
+            </div>
+            <button class= "btnComprar"> COMPRAR </button>
         </div>
+
+        <div class="cardP">
+            <div class= "userVend">
+                <img src="images/user.png" alt="" class="userImg">
+                <p class="textUser"> (Tienda o vendedor) </p>
+            </div>
+            <img src="images/traje-de-baño.jpeg" alt="" class="imagen-card">
+            <button class="btnOFF"> 10% OFF</button>
+            <p class="textProd">Traje de baño</p>
+            <div class="d-flex">
+                <p class="textPrecio texTachado">$2500</p>
+                <p class="textPrecio textColor">$2250</p>
+            </div>
+            <button class= "btnComprar"> COMPRAR </button>
+        </div>
+
+        <div class="cardP cardLeft cardBottom">
+            <div class= "userVend">
+                <img src="images/user.png" alt="" class="userImg">
+                <p class="textUser"> (Tienda o vendedor) </p>
+            </div>
+            <img src="images/short.jpeg" alt="" class="imagen-card">
+            <button class="btn2x1"> 4x2</button>
+            <p class="textProd">Short</p>
+            <div class="d-flex">
+                <p class="textPrecio texTachado">$2500</p>
+                <p class="textPrecio textColor">$1800</p>
+            </div>
+            <button class= "btnComprar"> COMPRAR </button>
+        </div>
+
+        <div class="cardP cardBottom cardEspacio">
+            <div class= "userVend">
+                <img src="images/user.png" alt="" class="userImg">
+                <p class="textUser"> (Tienda o vendedor) </p>
+            </div>
+            <img src="images/traje-de-baño2.jpeg" alt="" class="imagen-card">
+            <button class="btn2x1"> 2x1</button>
+            <p class="textProd">Traje de baño</p>
+            <div class="d-flex">
+                <p class="textPrecio texTachado">$2500</p>
+                <p class="textPrecio textColor">$1800</p>
+            </div>
+            <button class= "btnComprar"> COMPRAR </button>
+        </div>
+
     </div>
     <footer>
         <a href="">

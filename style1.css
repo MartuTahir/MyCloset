@@ -9,11 +9,21 @@ header {
     width: 100%;
 }
 
+:root{
+    --colorPrincipal: #b83963;
+}
+:root{
+    --colorSecundario: #E15073;
+}
+:root{
+    --colorTres: #a72544;
+}
+
 nav {
    z-index: 1 !important;
 }
 .navegar {
-    background-color: #b83963;
+    background-color: var(--colorPrincipal);
 }
 .bg-body-tertiary {
     background-color: #b83963 !important;
@@ -152,6 +162,9 @@ nav {
     width: 100%;
     height: 1rem;
 }
+.carousel-control-next, .carousel-control-prev {
+    z-index: 0 !important;
+}
 .tipografia {
     font-family: Inter;
     padding: 1% 0% 1% 39%;
@@ -239,7 +252,6 @@ footer {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     padding: 3rem;
-    background-color: #E15073;
 }
 .imagen-card {
     height: 17rem;
@@ -319,8 +331,73 @@ footer {
     cursor: pointer;
     opacity: 100;
 }
-
-@media (min-width: 481px) and (max-width: 1200px ) {
+.btn2x1 {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    background-color: #E15073;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    margin-bottom: 21rem;
+    margin-left: 8rem;
+    box-shadow: 1px 1px 1px 1px rgb(172, 169, 169);
+}
+.btnOFF {
+    position: absolute;
+    width: 100px;
+    height: 35px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+    margin-bottom: 21rem;
+    margin-left: 8rem;
+    box-shadow: 1px 1px 1px 1px rgb(172, 169, 169);
+}
+.texTachado {
+    text-decoration: line-through;
+    margin-right: 12px;
+    margin-top: 2px;
+}
+.textColor {
+    color: black;
+    font-weight: 800;
+    font-size: 19px;
+}
+a:hover {
+    cursor: pointer;
+}
+.formContacto {
+    padding: 10rem;
+}
+.tamañoContacto {
+    margin: 4rem 15rem;
+    margin-bottom: 4rem;
+    height: 49rem;
+    border-radius: 10rem;
+}
+.espacioDiv {
+    height: 15rem;
+}
+.form-label {
+    color: white !important;
+}
+.textContacto {
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
+@media (min-width: 549px) and (max-width: 1199px ) {
     .menu {
         justify-content: flex-start;
         font-size: 12.5px;
@@ -340,25 +417,18 @@ footer {
     .botones {
         max-width: 20rem;
     }
-    .gridMenu {
-        grid-template-columns: 7rem 1fr 28rem 25rem;
-    }
-    #imgInicio {
-        width: 427px;
-        height: 450px;
-        margin: 300px 200px 150px 180px;
-      }
-
-      .navegacion{
-        max-width: 400px;
-        margin-top: 1.5rem;
-      }
       #logo1 {
         width: 8.2rem;
         height: 8.3rem;
       }
-      .cardP:nth-child(-n + 2) {
+      .cardP:nth-child(-n + 1) {
         margin-top: 13rem;
+    }
+    .cardP {
+        margin-left: 2rem;
+    }
+    .tipografia {
+        padding: 1% 0% 1% 35%;
     }
 }
 
@@ -367,10 +437,21 @@ footer {
        display: none;
     }
     .tamañoMax {
-        padding-top: 7rem;
+        padding-top: 6rem;
     }
     .tipografia {
-        padding: 1% 0% 1% 17%;
-        font-size: 17px;
+        padding: 1% 0% 1% 24%;
+        font-size: 14px;
+    }
+    .cardP:nth-child(-n + 1) {
+        margin-top: 7rem;
+    }
+    .cardUser {
+        width: 15rem;
+        margin: 18%;
+    }
+    .paddingText {
+        font-size: 14px;
+        padding-top: 11.5%;
     }
 }
