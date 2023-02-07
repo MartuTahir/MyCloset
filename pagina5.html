@@ -5,59 +5,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Closet</title>
-    <link href="images/myClosetLogo.png">
-    <link rel="stylesheet" href="style1.css"/> 
+    <link rel="website icon" type="png" href="images/myClosetLogo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="scss/style.css"/> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <header class="gridMenu">
-        <div class="logo">
-            <img src="images/myClosetLogo.png" alt="" id="logo1"/>
-        </div>
-        <div class="input">
-            <input type="text" name="Buscar" class="buscador">
-            <a href="">
-                <img src="images/lupa.png" id="search"/>
-            </a>
-        </div>
-            <nav class="navegacion">
-                <ul class="menu">
-                    <li>
-                    <a href="index.html"> Inicio </a>
-                    </li>
-                    <li>
-                        <a href="pagina2.html"> Todas las publicaciones </a>
-                    </li>
-                    <li>
-                        <a href="pagina3.html"> Ofertas </a>
-                    </li>
-                    <li>
-                        <a href="pagina4.html"> Contacto </a>
-                    </li>
+    <header class="navegar">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid navegar">
+                <div class="">
+                    <a href="index.html">
+                        <img src="images/myClosetLogo.png" alt="" id="logo1"/>
+                      </a>
+                </div>
+                <div class="botones">
+                    <button class="botonVender">
+                        VENDER 
+                    </button>
+                    <button class="botonIngresar">
+                        <a href="pagina5.html" id="colorIngresar">
+                            INGRESAR
+                        </a>
+                    </button>
+                </div> 
+                <div>
+                    <a href="">
+                        <img src="images/iconoCarrito.png" class="iconos carrito"/>
+                    </a>
+                </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="images/menu.png-PhotoRoom.png" alt="" class="menuH">
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu" href="pagina2.html">Todas las publicaciones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu" href="pagina3.html">Ofertas</a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link menu" href="pagina4.html">Contacto</a>
+                  </li>
                 </ul>
-            </nav>
-        <div class="botones">
-            <button class="botonVender">
-                VENDER 
-            </button>
-            <button class="botonIngresar">
-                <a href="pagina5.html" id="colorIngresar">
-                    INGRESAR
-                </a>
-            </button>
-            <a href="">
-                <img src="images/iconoCarrito.png" class="iconos"/>
-            </a>
-        </div>  
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 buscador" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">
+                        <img src="images/lupa.png" id="search"/>
+                    </button>
+                </form>
+              </div>
+              
+            </div>
+          </nav>
+    
     </header>
-    <div id="div">
 
-    </div>
-     <div class="ingresar">
-       <input type="text">
-     </div>
+    <!-------------------- Formulario de contacto --------------------->
+
+    
+
+    <section class="form-section">
+        <div class="form-wrapper">
+          <form id="signup-form" class="signup-form">
+            <h2>Registrarse</h2>
+            <div class="form-control">
+              <input type="text" id="signup-first-name-input" name="Nombre" placeholder="Nombre" class="inputForm">
+              <small>Error</small>
+            </div>
+            <div class="form-control">
+              <input type="text" id="signup-last-name-input" name="Apellido" placeholder="Apellido" class="inputForm">
+              <small>Error</small>
+            </div>
+            <div class="form-control">
+              <input type="email" id="signup-email-input" name="Email" placeholder="Email" class="inputForm">
+              <small>Error</small>
+            </div>
+            <div class="form-control">
+              <input type="password" id="signup-password-input" name="Contraseña" placeholder="Contraseña" class="inputForm">
+              <small>Error</small>
+            </div>
+            <div class="form-control">
+              <input type="password" id="signup-confirm-password-input" name="Confirmar contraseña" placeholder="Confirmar contraseña" class="inputForm">
+              <small>Error</small>
+            </div>
+            <button type="submit">Crear cuenta</button>
+            <p> ¿Ya tenes una cuenta? <a href="#login-form" id="login-link">Ingresar</a></p>
+          </form>
+    
+          <form id="login-form" class="login-form">
+            <h2>Ingresá a tu cuenta</h2>
+            <div class="form-control">
+              <input type="email" id="login-email-input" name="Email" placeholder="Email">
+              <small>Error</small>
+            </div>
+            <div class="form-control">
+              <input type="password" id="login-password-input" name="Contraseña" placeholder="Contraseña">
+              <small>Error</small>
+            </div>
+            <button type="submit">Ingresar</button>
+            <p> ¿No tenes una cuenta? <a href="#signup-form" id="signup-link">Registrarme</a></p>
+          </form>
+        </div>
+      </section>
+    <!-------------------- Footer --------------------->
     <footer>
         <a href="">
             <img src="images/iconoFb.png" alt="" class="iconos iconoFb">
@@ -68,6 +133,96 @@
         <a href="">
             <img src="images/help.png" alt="" id="help">
         </a>
+        <div class="d-flex justify-content-center">
+            <img src="images/copyright-bold-svgrepo-com.png" alt="" class="imgCopy">
+            <p class="textCopy">Copyright 2023 Martina Tahir</p>
+        </div>
     </footer>
+
+
+    <!-------------------- Scrpt's --------------------->
+    <script src="script.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+			  integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
+			  crossorigin="anonymous"></script>
+		
+    <script>
+        const formWrapper = document.querySelector(".form-wrapper");
+    const signUpLink = document.querySelector("#signup-link");
+    const logInLink = document.querySelector("#login-link");
+
+    signUpLink.addEventListener("click", () => {
+    if (formWrapper.classList.contains("flip")) {
+        formWrapper.classList.remove("flip");
+    } else {
+        formWrapper.classList.add("flip");
+    }
+    });
+
+    // Flip Event
+    logInLink.addEventListener("click", () => {
+    if (formWrapper.classList.contains("flip")) {
+        formWrapper.classList.remove("flip");
+    } else {
+        formWrapper.classList.add("flip");
+    }
+    });
+
+    // sign up form start
+    const signUpForm = document.querySelector("#signup-form");
+
+    signUpForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const firstName = document.querySelector("#signup-first-name-input");
+    const lastName = document.querySelector("#signup-last-name-input");
+    const email = document.querySelector("#signup-email-input");
+    const password = document.querySelector("#signup-password-input");
+    const confirmPassword = document.querySelector(
+        "#signup-confirm-password-input"
+    );
+
+    checkRequired(firstName);
+    checkRequired(lastName);
+    checkRequired(email);
+    checkRequired(password);
+    checkRequired(confirmPassword);
+    });
+    // sign up form end
+
+    // log in form start
+    const logInForm = document.querySelector("#login-form");
+
+    logInForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const logInEmail = document.querySelector("#login-email-input");
+    const logInPassword = document.querySelector("#login-password-input");
+
+    checkRequired(logInEmail);
+    checkRequired(logInPassword);
+    });
+    // log in form end
+
+    function checkRequired(input) {
+    if (input.value.trim() === "") {
+        return setErrorFor(input, `${input.name} cannot be empty`);
+    } else {
+        return setSuccessFor(input);
+    }
+    }
+
+    function setErrorFor(input, message) {
+    const formControl = input.parentElement;
+    const small = formControl.querySelector("small");
+    formControl.className = "form-control error";
+    small.innerText = message;
+    }
+
+    function setSuccessFor(input) {
+    const formControl = input.parentElement;
+    formControl.className = "form-control success";
+    }
+</script>
 </body>
 </html>
