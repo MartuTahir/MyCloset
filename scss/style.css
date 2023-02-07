@@ -40,6 +40,11 @@ nav {
 .btn {
   background-color: #E15073 !important;
   border-color: #E15073 !important;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: #a72544 !important;
+  transform: scale(1.1);
 }
 
 .form-control {
@@ -203,6 +208,10 @@ nav {
   background: radial-gradient(circle, rgb(225, 80, 115) 0%, rgb(184, 57, 99) 50%, rgb(167, 37, 68) 100%);
 }
 
+.mobile-inicio {
+  display: none;
+}
+
 /*footer*/
 .iconoFb {
   margin: 20px 0px 20px 5px;
@@ -278,14 +287,7 @@ footer {
   gap: 2rem;
   padding: 3rem;
 }
-
-.imagen-card {
-  height: 17rem;
-  border-radius: 1rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-
-.cardP {
+.grid_card .cardP {
   width: 16rem;
   display: flex;
   flex-direction: column;
@@ -297,64 +299,29 @@ footer {
   font-family: Inter;
   background-color: white;
   transition: 0.8s;
-}
-.cardP:hover {
-  cursor: pointer;
   box-shadow: #eca8b8 0px 25px 30px, #ec90af 0px -12px 20px, #f388ac 0px 4px 6px, #f5759f 0px 12px 13px, #ee719a 0px -3px 5px;
 }
-.cardP:nth-child(-n+4) {
+.grid_card .cardP:hover {
+  transform: scale(1.03);
+}
+.grid_card .cardP:nth-child(-n+4) {
   margin-top: 13rem;
 }
-
-.textProd {
+.grid_card .imagen-card {
+  height: 17rem;
+  border-radius: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.grid_card .textProd {
   margin-top: 1.5rem;
   font-size: 1.2rem;
   font-weight: 500;
 }
-
-.textPrecio {
-  margin-top: 0;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.userImg {
-  width: 2.8rem;
-  height: 2.8rem;
-  margin: 0.5rem 0.3rem 1.5rem 0rem;
-}
-
-.paddingText {
-  padding-top: 5.5%;
-  font-family: Inter;
-  color: black;
-}
-
-.cardUser {
-  width: 20rem;
-  margin: 3%;
-  margin-bottom: 8%;
-}
-
-.gap {
-  gap: 5%;
-}
-
-.userVend {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  width: 100%;
-  border-bottom: 3px solid #b83055;
-  margin-bottom: 2.5rem;
-}
-
-.textUser {
+.grid_card .textUser {
   margin-top: 1.4rem;
   font-size: 1rem;
 }
-
-.btnComprar {
+.grid_card .btnComprar {
   width: 150px;
   height: 35px;
   background-color: #E15073;
@@ -368,12 +335,11 @@ footer {
   opacity: 0;
   transition: 0.5s;
 }
-.btnComprar:hover {
+.grid_card .btnComprar:hover {
   cursor: pointer;
   opacity: 100;
 }
-
-.btnOfertas, .btnOFF, .btn2x1 {
+.grid_card .btnOfertas, .grid_card .btnOFF, .grid_card .btn2x1 {
   position: absolute;
   width: 100px;
   height: 35px;
@@ -388,19 +354,59 @@ footer {
   margin-left: 8rem;
   box-shadow: 1px 1px 1px 1px rgb(172, 169, 169);
 }
-
-.btn2x1 {
+.grid_card .btn2x1 {
   background-color: #E15073;
 }
-
-.btnOFF {
+.grid_card .btnOFF {
   background-color: black;
 }
-
-.texTachado {
+.grid_card .texTachado {
   text-decoration: line-through;
   margin-right: 12px;
   margin-top: 2px;
+}
+.grid_card .textPrecio {
+  margin-top: 0;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.userImg {
+  width: 2.8rem;
+  height: 2.8rem;
+  margin: 0.5rem 0.3rem 1.5rem 0rem;
+}
+
+.userVend {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  width: 100%;
+  border-bottom: 3px solid #b83055;
+  margin-bottom: 2.5rem;
+}
+
+.paddingText {
+  padding-top: 5.5%;
+  font-family: Inter;
+  color: black;
+}
+
+.cardUser {
+  width: 20rem;
+  margin: 3%;
+  margin-bottom: 8%;
+  border: 4px solid #b83055;
+  border-radius: 2rem;
+  box-shadow: #eca8b8 0px 25px 30px, #ec90af 0px -12px 20px, #f388ac 0px 4px 6px, #f5759f 0px 12px 13px, #ee719a 0px -3px 5px;
+  transition: 0.5s;
+}
+.cardUser:hover {
+  transform: scale(1.03);
+}
+
+.gap {
+  gap: 5%;
 }
 
 .textColor {
@@ -413,31 +419,9 @@ a:hover {
   cursor: pointer;
 }
 
-/*contacto*/
-.formContacto {
-  padding: 10rem;
-}
-
-.tamañoContacto {
-  margin: 4rem 15rem;
-  margin-bottom: 4rem;
-  height: 49rem;
-  border-radius: 10rem;
-}
-
+/*****************************contacto***************************/
 .espacioDiv {
   height: 10rem;
-}
-
-.form-label {
-  color: white !important;
-}
-
-.textContacto {
-  font-family: Inter;
-  font-size: 25px;
-  font-weight: 600;
-  color: white;
 }
 
 #contact {
@@ -446,48 +430,46 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-
-.contact-box {
+#contact .contact-box {
   width: clamp(100px, 90%, 1000px);
   margin: 80px 50px;
   display: flex;
   flex-wrap: wrap;
 }
-
-.contact-links, .contact-form-wrapper {
+#contact .form-label {
+  color: white !important;
+}
+#contact .contact-links, #contact .contact-form-wrapper {
   width: 50%;
   padding: 8% 5% 10% 5%;
 }
-
-.contact-links {
+#contact .contact-links {
   background-color: #a72544;
   background: radial-gradient(circle at 55% 92%, #a72544 0 12%, transparent 12.2%), radial-gradient(circle at 94% 72%, #a72544 0 10%, transparent 10.2%), radial-gradient(circle at 20% max(78%, 350px), #a72544 0 7%, transparent 7.2%), radial-gradient(circle at 0% 0%, #a72544 0 40%, transparent 40.2%), #b83963;
   border-radius: 10px 0 0 10px;
 }
-
-.contact-form-wrapper {
+#contact .contact-form-wrapper {
   background-color: #f5d9e2;
   border-radius: 0 10px 10px 0;
 }
-
 @media only screen and (max-width: 800px) {
-  .contact-links, .contact-form-wrapper {
+  #contact .contact-links, #contact .contact-form-wrapper {
     width: 100%;
   }
-  .contact-links {
+  #contact .contact-links {
     border-radius: 10px 10px 0 0;
   }
-  .contact-form-wrapper {
+  #contact .contact-form-wrapper {
     border-radius: 0 0 10px 10px;
   }
 }
 @media only screen and (max-width: 400px) {
-  .contact-box {
+  #contact .contact-box {
     width: 95%;
     margin: 8% 5%;
   }
 }
-.textoCont {
+#contact .textoCont {
   font-family: Inter;
   color: #fff;
   font-size: clamp(30px, 6vw, 45px);
@@ -495,20 +477,17 @@ a:hover {
   text-align: center;
   transform: scale(0.95, 1);
 }
-
-.links {
+#contact .links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 50px;
 }
-
-.link {
+#contact .link {
   margin: 10px;
   cursor: pointer;
 }
-
-.imgContact {
+#contact .imgContact {
   width: 45px;
   height: 45px;
   transition: 0.2s;
@@ -517,23 +496,20 @@ a:hover {
       -ms-user-select: none;
           user-select: none;
 }
-.imgContact:hover {
+#contact .imgContact:hover {
   transform: scale(1.1, 1.1);
 }
-.imgContact:active {
+#contact .imgContact:active {
   transform: scale(1.1, 1.1);
   filter: hue-rotate(220deg) drop-shadow(2px 4px 4px #222) sepia(0.3);
 }
-
-.form-item {
+#contact .form-item {
   position: relative;
 }
-
-label, input, textarea {
+#contact label, #contact input, #contact textarea {
   font-family: Inter;
 }
-
-label {
+#contact label {
   position: absolute;
   top: 10px;
   left: 2%;
@@ -545,8 +521,7 @@ label {
       -ms-user-select: none;
           user-select: none;
 }
-
-.input-textA {
+#contact .input-textA {
   width: 100%;
   outline: 0;
   border: 1px solid #ccc;
@@ -555,18 +530,16 @@ label {
   padding: 12px;
   font-size: clamp(15px, 1.5vw, 18px);
 }
-
-input:focus + label,
-input:valid + label,
-textarea:focus + label,
-textarea:valid + label {
+#contact input:focus + label,
+#contact input:valid + label,
+#contact textarea:focus + label,
+#contact textarea:valid + label {
   font-size: clamp(13px, 1.3vw, 16px);
   color: #777;
   top: -20px;
   transition: all 0.225s ease;
 }
-
-.submit-btn {
+#contact .submit-btn {
   background-color: #E15073;
   filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
   color: #fff;
@@ -584,33 +557,33 @@ textarea:valid + label {
           user-select: none;
   transition: 0.2s;
 }
-.submit-btn:hover {
+#contact .submit-btn:hover {
   background-color: #a72544;
   transform: scale(1.1, 1.1);
 }
-.submit-btn:active {
+#contact .submit-btn:active {
   transform: scale(1.1, 1.1);
   filter: sepia(0.5);
 }
-
 @media only screen and (max-width: 820px) {
-  .textoCont {
+  #contact .textoCont {
     font-size: clamp(30px, 10vw, 30px);
   }
 }
 @media only screen and (max-width: 400px) {
-  .textoCont {
+  #contact .textoCont {
     font-size: clamp(30px, 12vw, 30px);
   }
-  .links {
+  #contact .links {
     padding-top: 30px;
   }
-  .imgContact {
+  #contact .imgContact {
     width: 38px;
     height: 38px;
   }
 }
-/*formulario ingresar*/
+
+/*********************************formulario ingresar********************************/
 *,
 *::before,
 *::after {
@@ -646,7 +619,7 @@ body {
   transform: rotateY(180deg);
 }
 
-/* Sign Up Form Start */
+/******************************** Inicio form registrar ************************************/
 .signup-form {
   background-color: #b83963;
   position: absolute;
@@ -818,9 +791,6 @@ body {
   #logo1 {
     display: none;
   }
-  .tamañoMax {
-    padding-top: 6rem;
-  }
   .tipografia {
     padding: 1% 0% 1% 24%;
     font-size: 14px;
@@ -844,6 +814,26 @@ body {
     margin-top: 12%;
     font-size: 20px;
   }
+  .signup-form button {
+    height: 2rem;
+    width: 35%;
+    font-size: 12px;
+  }
+  .signup-form p {
+    font-size: 12px;
+  }
+  .login-form h2 {
+    color: white;
+    font-size: 20px;
+  }
+  .login-form button {
+    height: 2rem;
+    width: 35%;
+    font-size: 12px;
+  }
+  .login-form p {
+    font-size: 12px;
+  }
   .form-control input {
     height: 1rem;
     width: 5rem;
@@ -857,12 +847,13 @@ body {
   .form-control input::placeholder {
     font-size: 10px;
   }
-  .signup-form button {
-    height: 2rem;
-    width: 35%;
-    font-size: 12px;
+  .mobile-inicio {
+    display: block;
   }
-  .signup-form p {
-    font-size: 12px;
+  #carouselExample {
+    display: none;
+  }
+  .tamañoMax {
+    padding-top: 3.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

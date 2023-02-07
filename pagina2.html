@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Closet</title>
+    <meta name="description" content="Todas las publicaciones de ropa de nuestra pagina">
+    <meta name="keywords"  content="moda, ropa, tienda de ropa, remera">
+    <title>Todas las publicaciones | My Closet</title>
     <link rel="website icon" type="png" href="images/myClosetLogo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -85,13 +87,12 @@
                 <p class="textUser"> (Tienda o vendedor) </p>
             </div>
             <img src="images/remera.jpeg" alt="" class="imagen-card">
-            
             <p class="textProd">Remera</p>
             <p class="textPrecio">$2500</p>
             <button class= "btnComprar"> COMPRAR </button>
         </div>
 
-        <div class="gradient-border gradient-border-pseudo cardP cardEspacio">
+        <div class="cardP cardEspacio">
             <div class= "userVend">
                 <img src="images/user.png" alt="" class="userImg">
                 <p class="textUser"> (Tienda o vendedor) </p>
@@ -174,12 +175,7 @@
 			  integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
 			  crossorigin="anonymous"></script>
     <script>
-        $(function(){
-        $(document).one('click', '.like-review', function(e) {
-            $(this).html('<i class="fa fa-heart" aria-hidden="true"></i> You liked this');
-            $(this).children('.fa-heart').addClass('animate-like');
-        });
-    });
+        document.body.onkeypress = function(){document.body.classList.toggle('liked')}
     </script>
 </body>
 </html>
