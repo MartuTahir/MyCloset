@@ -5,8 +5,9 @@
   box-sizing: border-box;
 }
 
-/*variables*/
-/*pisando componentes de bs*/
+/********************************variables************************************/
+/********************************mixins************************************/
+/*************************pisando componentes de bs*************************/
 header {
   position: fixed !important;
   z-index: 1;
@@ -65,7 +66,7 @@ nav {
   color: black !important;
 }
 
-/*header*/
+/****************************************header*************************************/
 #logo1 {
   width: 150px;
   height: 150px;
@@ -98,7 +99,7 @@ nav {
   height: 2rem;
 }
 
-.botonVender {
+.btns, .botonIngresar, .botonVender {
   width: 100px;
   height: 40px;
   background-color: #E15073;
@@ -108,6 +109,9 @@ nav {
   font-family: Inter;
   font-weight: 500;
   font-size: 14px;
+}
+
+.botonVender {
   transition: all 0.3s;
 }
 .botonVender:hover {
@@ -116,15 +120,6 @@ nav {
 }
 
 .botonIngresar {
-  width: 100px;
-  height: 40px;
-  background-color: #E15073;
-  color: white;
-  border-radius: 25px;
-  border: none;
-  font-family: Inter;
-  font-weight: 500;
-  font-size: 14px;
   text-decoration: none;
   transition: all 0.3s;
   margin-left: 1rem;
@@ -134,16 +129,15 @@ nav {
   transform: scale(1.1);
   background-color: #a72544;
 }
-
-#colorIngresar {
+.botonIngresar #colorIngresar {
   color: white;
   text-decoration: none;
 }
 
 .iconos {
-  background-color: #E15073;
   width: 40px;
   height: 40px;
+  background-color: #E15073;
   border-radius: 20px;
   transition: all 0.3s;
   margin-left: 1rem;
@@ -165,36 +159,17 @@ nav {
   color: white;
 }
 
-.input {
-  grid-area: buscar;
-  margin-left: 4rem;
-}
-
 .botones {
   grid-area: botones;
   justify-content: space-evenly;
 }
 
-/*inicio*/
-#imgInicio {
-  margin-top: 10rem;
-}
-
-.fondoInicio {
-  background-color: #E15073;
-}
-
+/********************************inicio*******************************/
 .tamañoMax {
   padding-top: 10rem;
   padding-bottom: 5rem;
 }
-
-.espacio {
-  width: 100%;
-  height: 1rem;
-}
-
-.carousel-control-next, .carousel-control-prev {
+.tamañoMax .carousel-control-next, .tamañoMax .carousel-control-prev {
   z-index: 0 !important;
 }
 
@@ -212,66 +187,34 @@ nav {
   display: none;
 }
 
-/*footer*/
-.iconoFb {
+/*************************************footer***********************************/
+footer {
+  background-color: #b83963;
+}
+footer .iconoFb {
   margin: 20px 0px 20px 5px;
 }
-
-.iconoIg {
+footer .iconoIg {
   margin: 20px 0px 20px 20px;
 }
-
-#help {
+footer #help {
   width: 15px;
   height: 15px;
   margin: 30px 10px 30px 15px;
 }
-
-body {
-  margin: 0;
-}
-
-footer {
-  background-color: #b83963;
-}
-
-.imgCopy {
-  width: 1%;
-  height: 1%;
+footer .imgCopy {
+  width: 1.2%;
+  height: 1.2%;
   color: white;
   float: right;
 }
-
-.textCopy {
+footer .textCopy {
   color: black;
   font-family: Inter;
   font-size: 12px;
 }
 
 /**************************************cards de productos**************************************/
-.divProd1 {
-  margin-top: 200px;
-  display: flex;
-  flex-direction: row;
-}
-
-.bordeProd {
-  border: 2px solid rgb(182, 178, 178);
-  border-radius: 20px;
-  margin-top: 200px;
-  height: 450px;
-}
-
-.bordeProds {
-  border: 2px solid rgb(182, 178, 178);
-  border-radius: 20px;
-  height: 450px;
-}
-
-#div {
-  height: 200px;
-}
-
 .ingresar {
   border: 2px solid #b83963;
   border-radius: 20px;
@@ -419,7 +362,7 @@ a:hover {
   cursor: pointer;
 }
 
-/*****************************contacto***************************/
+/************************************contacto**************************************/
 .espacioDiv {
   height: 10rem;
 }
@@ -592,21 +535,15 @@ a:hover {
   box-sizing: border-box;
 }
 
-body {
-  position: relative;
-  font-family: Inter;
-}
-
 .form-section {
   background-color: white;
-  height: 100vh;
   width: 100%;
+  height: 100vh;
   display: grid;
   place-items: center;
   margin-bottom: 25%;
 }
-
-.form-wrapper {
+.form-section .form-wrapper {
   width: 375px;
   height: 650px;
   position: relative;
@@ -614,8 +551,7 @@ body {
   transition: all 0.5s linear;
   margin-top: 17%;
 }
-
-.form-wrapper.flip {
+.form-section .form-wrapper.flip {
   transform: rotateY(180deg);
 }
 
@@ -623,8 +559,8 @@ body {
 .signup-form {
   background-color: #b83963;
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
   border-radius: 1rem;
   padding: 1rem;
   -webkit-backface-visibility: hidden;
@@ -634,33 +570,21 @@ body {
   align-content: space-around;
   box-shadow: #eca8b8 0px 50px 55px, #ec90af 0px -12px 30px, #f388ac 0px 4px 6px, #f5759f 0px 12px 13px, #ee719a 0px -3px 5px;
 }
-
 .signup-form h2 {
   color: white;
   margin-top: 12%;
   font-size: 30px;
 }
-
 .signup-form .form-control {
   width: 100%;
   display: grid;
 }
-
-.form-control input {
-  border: none;
-  border-radius: 2rem;
-  height: 0.5rem;
-  padding: 2rem;
-}
-
-.form-control small {
+.signup-form .form-control small {
   visibility: hidden;
 }
-
-.form-control.error small {
+.signup-form .form-control.error small {
   visibility: visible;
 }
-
 .signup-form button {
   background-color: #E15073;
   border: none;
@@ -675,23 +599,28 @@ body {
   transform: scale(1.1);
   background-color: #a72544;
 }
-
 .signup-form p {
   color: white;
 }
-
 .signup-form p a {
   text-decoration: none;
   font-weight: 600;
   color: #530d1d;
 }
 
+.form-control input {
+  border: none;
+  border-radius: 2rem;
+  height: 0.5rem;
+  padding: 2rem;
+}
+
 /******************************** Inicio Form Ingresar *******************************************/
 .login-form {
   background-color: #b83963;
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100%;
   border-radius: 0.5rem;
   padding: 6rem 1rem;
   transform: rotateY(-180deg);
@@ -701,32 +630,20 @@ body {
   justify-items: center;
   align-content: space-around;
 }
-
 .login-form h2 {
   color: white;
   font-size: 25px;
 }
-
 .login-form .form-control {
   display: grid;
   width: 100%;
 }
-
-.form-control input {
-  border: none;
-  border-radius: 0.25rem;
-  height: 2rem;
-  padding: 0 0.25rem;
-}
-
-.form-control small {
+.login-form .form-control small {
   visibility: hidden;
 }
-
-.form-control.error small {
+.login-form .form-control.error small {
   visibility: visible;
 }
-
 .login-form button {
   background-color: #E15073;
   border: none;
@@ -741,15 +658,20 @@ body {
   transform: scale(1.1);
   background-color: #a72544;
 }
-
 .login-form p {
   color: white;
 }
-
 .login-form p a {
   text-decoration: none;
   font-weight: 600;
   color: #530d1d;
+}
+
+.form-control input {
+  border: none;
+  border-radius: 0.25rem;
+  height: 2rem;
+  padding: 0 0.25rem;
 }
 
 /*********************************media queries*********************************************/
@@ -777,11 +699,11 @@ body {
     width: 8.2rem;
     height: 8.3rem;
   }
-  .cardP:nth-child(-n+1) {
-    margin-top: 13rem;
-  }
   .cardP {
     margin-left: 2rem;
+  }
+  .cardP:nth-child(-n+1) {
+    margin-top: 13rem;
   }
   .tipografia {
     padding: 1% 0% 1% 35%;
@@ -815,8 +737,8 @@ body {
     font-size: 20px;
   }
   .signup-form button {
-    height: 2rem;
     width: 35%;
+    height: 2rem;
     font-size: 12px;
   }
   .signup-form p {
@@ -827,16 +749,16 @@ body {
     font-size: 20px;
   }
   .login-form button {
-    height: 2rem;
     width: 35%;
+    height: 2rem;
     font-size: 12px;
   }
   .login-form p {
     font-size: 12px;
   }
   .form-control input {
-    height: 1rem;
     width: 5rem;
+    height: 1rem;
   }
   .form-control input::-moz-placeholder {
     font-size: 10px;
@@ -850,10 +772,13 @@ body {
   .mobile-inicio {
     display: block;
   }
+  .inicio-mobile {
+    max-width: 415px;
+  }
   #carouselExample {
     display: none;
   }
   .tamañoMax {
-    padding-top: 3.5rem;
+    padding-top: 5.5rem;
   }
 }/*# sourceMappingURL=style.css.map */

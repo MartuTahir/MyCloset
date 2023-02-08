@@ -4,12 +4,20 @@
     box-sizing: border-box;
 }
 
-/*variables*/
+/********************************variables************************************/
     $colorPrincipal: #b83963;
     $colorSecundario: #E15073;
     $colorTres: #a72544;
 
-/*pisando componentes de bs*/
+/********************************mixins************************************/
+
+    @mixin widthHeight ($width, $height)
+    {
+        width: $width;
+        height: $height;
+    }
+
+/*************************pisando componentes de bs*************************/
 header {
     position: fixed !important;
     z-index: 1;
@@ -61,7 +69,8 @@ nav {
         }
 }
 
-/*header*/
+/****************************************header*************************************/
+
 #logo1 {
     width: 150px;
     height: 150px;
@@ -85,13 +94,11 @@ nav {
         }
 }
 .menuH {
-    width: 2rem;
-    height: 2rem;
+    @include widthHeight (2rem, 2rem);
 }
 
-.botonVender {
-    width: 100px;
-    height: 40px;
+.btns {
+    @include widthHeight (100px,40px);
     background-color: $colorSecundario;
     color: white;
     border-radius: 25px;
@@ -99,6 +106,9 @@ nav {
     font-family: Inter;
     font-weight: 500;
     font-size: 14px;
+}
+.botonVender {
+    @extend .btns;
     transition: all 0.3s;
         &:hover {
             transform: scale(1.1);
@@ -106,15 +116,7 @@ nav {
         }
 }
 .botonIngresar {
-    width: 100px;
-    height: 40px;
-    background-color: $colorSecundario;
-    color: white;
-    border-radius: 25px;
-    border: none;
-    font-family: Inter;
-    font-weight: 500;
-    font-size: 14px;
+    @extend .btns;
     text-decoration: none;
     transition: all 0.3s;
     margin-left: 1rem;
@@ -123,15 +125,15 @@ nav {
             transform: scale(1.1);
             background-color: $colorTres;
         }
+        #colorIngresar {
+            color: white;
+            text-decoration: none;
+        }
 }
-#colorIngresar {
-    color: white;
-    text-decoration: none;
-}
+
 .iconos {
+    @include widthHeight (40px, 40px);
     background-color: $colorSecundario;
-    width: 40px;
-    height: 40px;
     border-radius: 20px;
     transition: all 0.3s;
     margin-left: 1rem;
@@ -150,33 +152,19 @@ nav {
     font-size: 14px;
     color: white;
 }
-.input {
-    grid-area: buscar;
-    margin-left: 4rem;
-}
 .botones {
     grid-area: botones;
     justify-content: space-evenly;
 }
 
-/*inicio*/
-#imgInicio {
-    margin-top: 10rem;
-}
-.fondoInicio {
-    background-color: $colorSecundario;
-}
+/********************************inicio*******************************/
 
 .tamañoMax {
     padding-top: 10rem;
     padding-bottom: 5rem;
-}
-.espacio { 
-    width: 100%;
-    height: 1rem;
-}
-.carousel-control-next, .carousel-control-prev {
-    z-index: 0 !important;
+    .carousel-control-next, .carousel-control-prev {
+        z-index: 0 !important;
+    }
 }
 .tipografia {
     font-family: Inter;
@@ -190,63 +178,40 @@ nav {
     display: none;
 }
 
-/*footer*/
-.iconoFb {
-    margin: 20px 0px 20px 5px;
-}
-.iconoIg {
-    margin: 20px 0px 20px 20px;
-}
-#help {
-    width: 15px;
-    height: 15px;
-    margin: 30px 10px 30px 15px;
-}
-body {
-    margin: 0;
-}
+/*************************************footer***********************************/
+
 footer {
     background-color: $colorPrincipal;
-}
-.imgCopy {
-    width: 1%;
-    height: 1%;
-    color: white;
-    float: right;
-}
-.textCopy {
-    color: black;
-    font-family: Inter;
-    font-size: 12px;
+    .iconoFb {
+        margin: 20px 0px 20px 5px;
+    }
+    .iconoIg {
+        margin: 20px 0px 20px 20px;
+    }
+    #help {
+        @include widthHeight (15px,15px);
+        margin: 30px 10px 30px 15px;
+    }
+    .imgCopy {
+        @include widthHeight (1.2%,1.2%);
+        color: white;
+        float: right;
+    }
+    .textCopy {
+        color: black;
+        font-family: Inter;
+        font-size: 12px;
+    }
+    
 }
 
 /**************************************cards de productos**************************************/
 
-.divProd1 {
-    margin-top: 200px;
-    display: flex;
-    flex-direction: row;
-}
-.bordeProd {
-    border: 2px solid rgb(182, 178, 178);
-    border-radius: 20px;
-    margin-top: 200px;
-    height: 450px;
-}
-.bordeProds {
-    border: 2px solid rgb(182, 178, 178);
-    border-radius: 20px;
-    height: 450px;
-}
-#div {
-    height: 200px;
-}
 .ingresar {
     border: 2px solid $colorPrincipal;
     border-radius: 20px;
     background-color: $colorPrincipal;
-    width: 300px;
-    height: 500px;
+    @include widthHeight (300px,500px);
     margin: 0px 250px 200px 500px;
 }
 
@@ -291,8 +256,7 @@ footer {
             font-size: 1rem;
         }
         .btnComprar {
-            width: 150px;
-            height: 35px;
+            @include widthHeight (150px,35px);
             background-color: $colorSecundario;
             color: white;
             border-radius: 25px;
@@ -310,8 +274,7 @@ footer {
         }
         .btnOfertas {
             position: absolute;
-            width: 100px;
-            height: 35px;
+            @include widthHeight (100px,35px);
             color: white;
             border-radius: 25px;
             border: none;
@@ -344,8 +307,7 @@ footer {
 
 }
 .userImg {
-    width: 2.8rem;
-    height: 2.8rem;
+    @include widthHeight (2.8rem,2.8rem);
     margin: 0.5rem 0.3rem 1.5rem 0rem;
 }
 .userVend {
@@ -386,7 +348,8 @@ a:hover {
     cursor: pointer;
 }
 
-/*****************************contacto***************************/
+/************************************contacto**************************************/
+
 .espacioDiv {
     height: 10rem;
 }
@@ -409,8 +372,7 @@ a:hover {
         width: 50%;
         padding: 8% 5% 10% 5%;
       }
-      
-      
+            
       .contact-links {
         background-color: $colorTres;
         background:
@@ -475,8 +437,7 @@ a:hover {
       }
       
       .imgContact {
-        width: 45px;
-        height: 45px;
+        @include widthHeight (45px,45px);
         transition: 0.2s;
         user-select: none;
             &:hover {
@@ -569,8 +530,7 @@ a:hover {
         }
         
         .imgContact {
-          width: 38px;
-          height: 38px;
+            @include widthHeight (38px,38px);
         }
       }
     
@@ -586,37 +546,29 @@ a:hover {
   margin: 0;
   box-sizing: border-box;
 }
-
-body {
-  position: relative;
-  font-family: Inter;
-}
 .form-section {
   background-color: white;
-  height: 100vh;
-  width: 100%;
+  @include widthHeight (100%,100vh);
   display: grid;
   place-items: center;
   margin-bottom: 25%;
-}
-.form-wrapper {
-  width: 375px;
-  height: 650px;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: all 0.5s linear;
-  margin-top: 17%;
-}
-.form-wrapper.flip {
-  transform: rotateY(180deg);
+  .form-wrapper {
+    @include widthHeight (375px,650px);
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s linear;
+    margin-top: 17%;
+  }
+  .form-wrapper.flip {
+    transform: rotateY(180deg);
+  }
 }
 
 /******************************** Inicio form registrar ************************************/
 .signup-form {
   background-color: $colorPrincipal;
   position: absolute;
-  height: 100%;
-  width: 100%;
+  @include widthHeight (100%,100%);
   border-radius: 1rem;
   padding: 1rem;
   backface-visibility: hidden;
@@ -624,20 +576,48 @@ body {
   justify-items: center;
   align-content: space-around;
   box-shadow: #eca8b8 0px 50px 55px, #ec90af 0px -12px 30px, #f388ac 0px 4px 6px, #f5759f 0px 12px 13px, #ee719a 0px -3px 5px;
-}
-.signup-form {
     h2 {
         color: white;
         margin-top: 12%;
-        font-size: 30px;
+        font-size: calc(5px*5);
     }
-}
-.signup-form {
     .form-control {
         width: 100%;
         display: grid;
+        small {
+            visibility: hidden;
+        }
     }
+    .form-control.error {
+        small {
+            visibility: visible;
+        }
+    }
+    button{
+        background-color: $colorSecundario;
+        border: none;
+        border-radius: 2rem;
+        height: 2.5rem;
+        width: 40%;
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s;
+            &:hover {
+                transform: scale(1.1);
+                background-color: $colorTres;
+            }
+    }
+    p {
+        color: white;
+        a{
+            text-decoration: none;
+            font-weight: 600;
+            color: #530d1d;
+        }
+    }
+    
 }
+
 .form-control {
     input {
         border: none;
@@ -646,17 +626,36 @@ body {
         padding: 2rem;
     }
 }
-.form-control {
-    small {
-        visibility: hidden;
+
+/******************************** Inicio Form Ingresar *******************************************/
+
+.login-form {
+  background-color: $colorPrincipal;
+  position: absolute;
+  @include widthHeight (100%,100%);
+  border-radius: 0.5rem;
+  padding: 6rem 1rem;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  display: grid;
+  justify-items: center;
+  align-content: space-around;
+    h2 {
+        color: white;
+        font-size: calc(5px*5);
     }
-}
-.form-control.error {
-    small {
-        visibility: visible;
+    .form-control {
+        display: grid;
+        width: 100%;
+            small {
+                visibility: hidden;
+            }
     }
-}
-.signup-form {
+    .form-control.error {
+        small {
+            visibility: visible;
+        }
+    }
     button{
         background-color: $colorSecundario;
         border: none;
@@ -671,50 +670,16 @@ body {
                 background-color: $colorTres;
             }
     }
-}
-.signup-form {
     p {
         color: white;
-    }
-}
-.signup-form {
-    p{
-        a{
-            text-decoration: none;
-            font-weight: 600;
-            color: #530d1d;
-        }
+            a {
+                text-decoration: none;
+                font-weight: calc(500+100);
+                color: #530d1d;
+            }
     }
 }
 
-/******************************** Inicio Form Ingresar *******************************************/
-
-.login-form {
-  background-color: $colorPrincipal;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  border-radius: 0.5rem;
-  padding: 6rem 1rem;
-  transform: rotateY(-180deg);
-  backface-visibility: hidden;
-  display: grid;
-  justify-items: center;
-  align-content: space-around;
-}
-.login-form {
-    h2 {
-        color: white;
-        font-size: 25px;
-    }
-  
-}
-.login-form {
-    .form-control {
-        display: grid;
-        width: 100%;
-    }
-}
 .form-control {
     input {
         border: none;
@@ -723,46 +688,7 @@ body {
         padding: 0 0.25rem;
     }
 }
-.form-control {
-    small {
-        visibility: hidden;
-    }
-}
-.form-control.error {
-    small {
-        visibility: visible;
-    }
-}
-.login-form {
-    button{
-        background-color: $colorSecundario;
-        border: none;
-        border-radius: 2rem;
-        height: 2.5rem;
-        width: 40%;
-        color: white;
-        cursor: pointer;
-        transition: all 0.3s;
-            &:hover {
-                transform: scale(1.1);
-                background-color: $colorTres;
-            }
-    }
-}
-.login-form {
-    p {
-        color: white;
-    }
-}
-.login-form {
-    p {
-        a {
-            text-decoration: none;
-            font-weight: 600;
-            color: #530d1d;
-        }
-    }
-}
+
 
 
 /*********************************media queries*********************************************/
@@ -775,27 +701,25 @@ body {
     .botonIngresar {
         margin-right: 1px;
         margin-left: 1px;
-        width: 5.5rem;
-        height: 2.5rem;
+        @include widthHeight (5.5rem,2.5rem);
         font-size: 12px;
     }
     .botonVender {
-        width: 5.5rem;
-        height: 2.5rem;
+        @include widthHeight (5.5rem,2.5rem);
         font-size: 12px;
     }
     .botones {
         max-width: 20rem;
     }
       #logo1 {
-        width: 8.2rem;
-        height: 8.3rem;
+        @include widthHeight (8.2rem,8.3rem);
       }
-      .cardP:nth-child(-n + 1) {
-        margin-top: 13rem;
-    }
+
     .cardP {
         margin-left: 2rem;
+            &:nth-child(-n + 1) {
+                margin-top: 13rem;
+            }
     }
     .tipografia {
         padding: 1% 0% 1% 35%;
@@ -822,8 +746,7 @@ body {
         padding-top: 11.5%;
     }
     .form-wrapper {
-        width: 280px;
-        height: 500px;
+        @include widthHeight (280px,500px);
     }
     .signup-form {
         h2 {
@@ -831,8 +754,7 @@ body {
             font-size: 20px;
         }
         button {
-            height: 2rem;
-            width: 35%;
+            @include widthHeight (35%,2rem);
             font-size: 12px;
         }
         p {
@@ -845,8 +767,7 @@ body {
             font-size: 20px;
         }
         button {
-            height: 2rem;
-            width: 35%;
+            @include widthHeight (35%,2rem);
             font-size: 12px;
         }
         p {
@@ -855,8 +776,7 @@ body {
     }
     .form-control {
         input {
-            height: 1rem;
-            width: 5rem;
+            @include widthHeight (5rem,1rem);
                 &::placeholder {
                     font-size: 10px;
                 }
@@ -865,11 +785,14 @@ body {
     .mobile-inicio {
         display: block;
     }
+    .inicio-mobile {
+        max-width: 415px ;
+    }
     #carouselExample {
         display: none;
     }
     .tamañoMax {
-        padding-top: 3.5rem;
+        padding-top: 5.5rem;
     }
     
 }
