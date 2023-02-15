@@ -62,9 +62,6 @@ nav {
   font-size: 0.9rem !important;
   font-weight: 500 !important;
 }
-.active:hover {
-  color: black !important;
-}
 
 /****************************************header*************************************/
 #logo1 {
@@ -79,6 +76,22 @@ nav {
 
 .nav-link {
   margin-left: 1rem !important;
+  display: table;
+}
+.nav-link:after {
+  content: "";
+  display: block;
+  height: 1.45px;
+  background-color: white;
+  transform: scale(0, 1);
+  transform-origin: center;
+  transition: transform 0.3s;
+}
+.nav-link:hover {
+  color: white;
+}
+.nav-link:hover::after {
+  transform: scale(1, 1);
 }
 
 .buscador:active {
@@ -436,7 +449,6 @@ a:hover {
   transition: 0.2s;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 #contact .imgContact:hover {
@@ -461,7 +473,6 @@ a:hover {
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 #contact .input-textA {
@@ -496,7 +507,6 @@ a:hover {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   transition: 0.2s;
 }
@@ -573,7 +583,7 @@ a:hover {
 .signup-form h2 {
   color: white;
   margin-top: 12%;
-  font-size: 30px;
+  font-size: 25px;
 }
 .signup-form .form-control {
   width: 100%;
@@ -763,9 +773,6 @@ a:hover {
   .form-control input::-moz-placeholder {
     font-size: 10px;
   }
-  .form-control input:-ms-input-placeholder {
-    font-size: 10px;
-  }
   .form-control input::placeholder {
     font-size: 10px;
   }
@@ -775,10 +782,10 @@ a:hover {
   .inicio-mobile {
     max-width: 415px;
   }
-  #carouselExample {
-    display: none;
-  }
   .tamañoMax {
     padding-top: 5.5rem;
+  }
+  .btnComprar {
+    opacity: 100;
   }
 }/*# sourceMappingURL=style.css.map */

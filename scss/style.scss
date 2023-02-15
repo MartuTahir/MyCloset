@@ -64,23 +64,37 @@ nav {
     font-family: Inter !important;
     font-size: 0.9rem !important;
     font-weight: 500 !important;
-        &:hover {
-            color: black !important;
-        }
+        
 }
-
 /****************************************header*************************************/
 
 #logo1 {
-    width: 150px;
-    height: 150px;
+    @include widthHeight (150px, 150px);
 }
 #search {
-    width: 1rem;
-    height: 1rem;
+    @include widthHeight (1rem, 1rem);
 }
 .nav-link {
     margin-left: 1rem !important;
+    display: table;
+      
+      &:after {
+        content: "";
+        display: block;
+        height: 1.45px;
+        background-color: white;
+        transform: scale(0,1);
+        transform-origin: center;
+        transition: transform .30s;
+        
+      }
+      
+      &:hover {
+        color: white;
+        &::after{
+            transform: scale(1,1);
+        }
+      }
 }
 .buscador:active {
     border-color: #a72544 !important;
@@ -177,6 +191,7 @@ nav {
 .mobile-inicio {
     display: none;
 }
+
 
 /*************************************footer***********************************/
 
@@ -674,7 +689,7 @@ a:hover {
         color: white;
             a {
                 text-decoration: none;
-                font-weight: calc(500+100);
+                font-weight: 600;
                 color: #530d1d;
             }
     }
@@ -787,9 +802,6 @@ a:hover {
     }
     .inicio-mobile {
         max-width: 415px ;
-    }
-    #carouselExample {
-        display: none;
     }
     .tamañoMax {
         padding-top: 5.5rem;
