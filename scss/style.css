@@ -200,19 +200,18 @@ nav {
   display: none;
 }
 
-/* Container */
 .wrapper {
   width: 800px;
   max-width: 100%;
   margin: auto;
   overflow: hidden;
-  margin-top: 2rem;
+  margin-top: 7%;
 }
 
 .carouselM {
   position: relative;
   width: 100%;
-  height: 333px;
+  height: 300px;
   padding-top: 56.25%;
   background: #ddd;
 }
@@ -323,8 +322,9 @@ footer .textCopy {
 }
 @media screen and (max-width: 548px) {
   .grid_card {
+    grid-template-columns: repeat(auto-fit, minmax(105px, 1fr));
     gap: 2rem;
-    padding: 6.5rem;
+    padding: 2rem;
   }
 }
 @media screen and (min-width: 834px) and (max-width: 1200px) {
@@ -355,15 +355,20 @@ footer .textCopy {
 }
 @media screen and (max-width: 548px) {
   .grid_card .cardP {
-    width: 11rem;
-    height: 24.5rem;
+    width: 10rem;
+    height: 23rem;
     padding: 0.5rem;
+    border: 2px solid #b83055;
+    box-shadow: #eca8b8 0px 15px 18px, #ec90af 0px -12px 20px, #f388ac 0px 4px 6px, #f5759f 0px 5px 10px, #ee719a 0px -3px 5px;
   }
-  .grid_card .cardP:nth-child(-n+6) {
-    margin-top: 1rem;
+  .grid_card .cardP:nth-child(n+1) {
+    margin-top: 4.8rem;
+  }
+  .grid_card .cardP:hover {
+    transform: scale(1);
   }
 }
-@media screen and (min-width: 834px) and (max-width: 1200px) {
+@media screen and (min-width: 767px) and (max-width: 1200px) {
   .grid_card .cardP:nth-child(-n+6) {
     margin-top: 5rem;
   }
@@ -386,6 +391,7 @@ footer .textCopy {
 @media screen and (max-width: 548px) {
   .grid_card .textProd {
     font-size: 0.9rem;
+    margin-top: 5px;
   }
 }
 .grid_card .textUser {
@@ -437,12 +443,15 @@ footer .textCopy {
   right: -61px;
   box-shadow: 1px 1px 1px 1px rgb(172, 169, 169);
 }
+.grid_card .btnOfertas:hover, .grid_card .btnOFF:hover, .grid_card .btn2x1:hover {
+  cursor: auto;
+}
 @media screen and (max-width: 548px) {
   .grid_card .btnOfertas, .grid_card .btnOFF, .grid_card .btn2x1 {
-    width: 60px;
+    width: 52px;
     height: 25px;
-    font-size: 12px;
-    top: -180px;
+    font-size: 11px;
+    top: -170px;
     right: -40px;
   }
 }
@@ -456,6 +465,11 @@ footer .textCopy {
   text-decoration: line-through;
   margin-right: 12px;
   margin-top: 2px;
+}
+@media screen and (max-width: 548px) {
+  .grid_card .texTachado {
+    margin-top: 0;
+  }
 }
 .grid_card .textPrecio {
   font-size: 1rem;
@@ -486,31 +500,71 @@ footer .textCopy {
   align-content: center;
   width: 100%;
   border-bottom: 3px solid #b83055;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
 }
 @media screen and (max-width: 548px) {
   .userVend {
     border-bottom: 2px solid #b83055;
+    margin-bottom: 1rem;
   }
+}
+
+.btn-primary {
+  border-radius: 2rem !important;
 }
 
 .paddingText {
   padding-top: 5.5%;
   font-family: Inter;
-  color: black;
+  color: white;
+}
+
+.imgVend {
+  margin-top: 1rem;
+  width: 6.5rem;
+  height: 7.5rem;
+}
+@media screen and (max-width: 548px) {
+  .imgVend {
+    margin-top: 1rem;
+    width: 4rem;
+    height: 5rem;
+  }
 }
 
 .cardUser {
-  width: 20rem;
-  margin: 3%;
+  margin: 9%;
   margin-bottom: 8%;
-  border: 4px solid #b83055;
-  border-radius: 2rem;
-  box-shadow: #eca8b8 0px 25px 30px, #ec90af 0px -12px 20px, #f388ac 0px 4px 6px, #f5759f 0px 12px 13px, #ee719a 0px -3px 5px;
-  transition: 0.5s;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .cardUser:hover {
   transform: scale(1.03);
+}
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+  .cardUser {
+    margin-left: 12rem;
+  }
+}
+
+.card-header {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(223, 142, 161, 0.9640231092) 0%, rgba(235, 81, 131, 0.9612219888) 50%, rgba(238, 63, 111, 0.9640231092) 66%);
+  border-top-right-radius: 0.8rem !important;
+  border-top-left-radius: 0.8rem !important;
+}
+
+.card {
+  padding: 0 !important;
+  width: 24rem;
+  height: 20rem;
+}
+@media screen and (max-width: 548px) {
+  .card {
+    width: 16rem !important;
+    height: 14rem !important;
+  }
 }
 
 .gap {
@@ -621,6 +675,12 @@ a:hover {
 #contact .form-item textarea {
   width: 20rem;
   height: 8rem;
+}
+@media screen and (max-width: 548px) {
+  #contact .form-item textarea {
+    width: 19rem;
+    height: 8rem;
+  }
 }
 #contact label, #contact input, #contact textarea {
   font-family: Inter;
@@ -800,6 +860,7 @@ a:hover {
   display: grid;
   justify-items: center;
   align-content: space-around;
+  box-shadow: #eca8b8 0px 50px 55px, #ec90af 0px -12px 30px, #f388ac 0px 4px 6px, #f5759f 0px 12px 13px, #ee719a 0px -3px 5px;
 }
 .login-form h2 {
   color: white;
@@ -890,17 +951,18 @@ a:hover {
     height: 10rem;
   }
   .card-body {
-    padding: 0.3rem;
+    padding: 0.8rem;
   }
   .card {
     position: inherit !important;
     margin-top: 2rem;
-    margin-left: 6rem;
+    margin-left: 17%;
   }
   .btn-primary {
-    width: 4rem;
-    height: 2rem;
-    font-size: 12px;
+    width: 3.8rem;
+    height: 1.5rem;
+    font-size: 10.5px;
+    font-weight: 600;
     border-radius: 1.5rem;
   }
   .paddingText {
