@@ -63,10 +63,19 @@ nav {
   font-weight: 500 !important;
 }
 
+footer a {
+  color: transparent !important;
+}
+
 /****************************************header*************************************/
 #logo1 {
   width: 150px;
   height: 150px;
+}
+
+#logo-mobile {
+  width: 100px;
+  height: 100px;
 }
 
 #search {
@@ -673,12 +682,14 @@ a:hover {
   position: relative;
 }
 #contact .form-item textarea {
-  width: 20rem;
-  height: 8rem;
+  width: 25rem;
+  height: 9rem;
+  border-radius: 0.8rem;
+  resize: none;
 }
 @media screen and (max-width: 548px) {
   #contact .form-item textarea {
-    width: 19rem;
+    width: 16rem;
     height: 8rem;
   }
 }

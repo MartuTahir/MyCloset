@@ -66,10 +66,18 @@ nav {
     font-weight: 500 !important;
         
 }
+footer {
+    a {
+        color: transparent !important;
+    }
+}
 /****************************************header*************************************/
 
 #logo1 {
     @include widthHeight (150px, 150px);
+}
+#logo-mobile {
+    @include widthHeight (100px, 100px);
 }
 #search {
     @include widthHeight (1rem, 1rem);
@@ -649,9 +657,11 @@ a:hover {
       .form-item {
         position: relative;
             textarea {
-                @include widthHeight (20rem,8rem);
+                @include widthHeight (25rem,9rem);
+                border-radius: 0.8rem;
+                resize: none;
                 @media screen and (max-width: 548px) {
-                    @include widthHeight (19rem,8rem);
+                    @include widthHeight (16rem,8rem);
                 }
             }
       }
